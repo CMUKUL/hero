@@ -1,0 +1,32 @@
+<div class="container">
+<ul class="nav nav-tabs">
+  <li class="active"><a data-toggle="tab" href="#home">ALL</a></li>
+  <li><a data-toggle="tab" href="#DC">DC</a></li>
+  <li><a data-toggle="tab" href="#MARVEL">MARVEL</a></li>
+</ul>
+
+<div class="tab-content">
+  <div id="home" class="tab-pane fade in active">
+    <ul>
+      <li *ngFor="let hero of allTabHeroes" style="color:blueviolet; margin-bottom:10px ;text-align:left">{{hero}} 
+        <span><button type="button" class="btn btn-primary btn-xs pull-right" (click)="goToDC(hero)">DC</button></span>
+        <span><button type="button" class="btn btn-primary btn-xs pull-right" (click)="goToMARVEL(hero)">MARVEL</button></span>
+      </li>
+    </ul> 
+  </div>
+  <div id="DC" class="tab-pane fade">
+    <ul>
+      <li *ngFor="let hero of DCtabHeroes" style="color:blueviolet; margin-bottom:10px ;text-align:left">{{hero}} 
+        <span><button type="button" class="btn btn-primary btn-xs pull-right" (click)="goToMARVELfromDC(hero)">MARVEL</button></span>
+      </li>
+    </ul> 
+  </div>
+  <div id="MARVEL" class="tab-pane fade">
+    <ul>
+      <li *ngFor="let hero of MARVELtabHeroes" style="color:blueviolet; margin-bottom:10px ;text-align:left">{{hero}} 
+        <span><button type="button" class="btn btn-primary btn-xs pull-right" (click)="goToDCfromMARVEL(hero)">DC</button></span>
+       </li>
+    </ul> 
+  </div>
+</div>
+</div>
