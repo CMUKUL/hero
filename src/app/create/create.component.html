@@ -1,0 +1,9 @@
+<p>
+  create works!
+</p>
+<input type="text" name="heroes" [(ngModel)]="newEntry"  placeholder="Enter Hero">
+<button type="submit" (click)=onAdd(newEntry)>Add</button> 
+
+<app-tab [allTabHeroes] ="Heroes"></app-tab>
+
+
